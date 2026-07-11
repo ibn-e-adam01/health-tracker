@@ -1,0 +1,26 @@
+@import url('https://googleapis.com');
+
+@font-face {
+  font-family: 'ArmelieCustom';
+  src: url('./assets/fonts/Armelie-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ArizoniaCustom';
+  src: url('./assets/fonts/Arizonia-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AmsterdamCustom';
+  src: url('./assets/fonts/Amsterdam.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@import "tailwindcss";
+
+
