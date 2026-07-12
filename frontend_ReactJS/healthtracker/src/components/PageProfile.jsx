@@ -15,7 +15,7 @@ const PageProfile = () => {
  
     const dataUser = async () => {
             try {
-                let res = await axios.get(`${API_URL}profile`, {
+                let res = await axios.get(`${API_URL}/profile`, {
                     withCredentials: true
                 });
 
@@ -45,7 +45,7 @@ const PageProfile = () => {
     },[]);
 
     const updateActivityStatus = async (activity) => {
-            let response = await axios.put(`${API_URL}profile`,{
+            let response = await axios.put(`${API_URL}/profile`,{
                 activityId: activity._id,
                 activityStatus: activity.activityStatus
             }, {
@@ -58,7 +58,7 @@ const PageProfile = () => {
     }
 
     const deleteActivity = async (activity) => {
-            let fetchedData = await axios.post(`${API_URL}profile`,{
+            let fetchedData = await axios.post(`${API_URL}/profile`,{
                 activityId: activity._id,
             }, {
                 withCredentials: true
@@ -71,7 +71,7 @@ const PageProfile = () => {
 
     const logOut = async () => {
         console.log("Before Axios");
-            let fetchedData = await axios.post(`${API_URL}logout`,{
+            let fetchedData = await axios.post(`${API_URL}/logout`,{
             }, {
                 withCredentials: true
         })
