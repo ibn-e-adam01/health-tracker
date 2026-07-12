@@ -7,6 +7,7 @@ const AddActivityInput = () => {
     const [Activity, setActivity] = useState("");
 
     const navigate = useNavigate();
+    const API_URL = import.meta.env.VITE_API_URL;
 
   return (
     <>
@@ -19,7 +20,7 @@ const AddActivityInput = () => {
                 Activity
             }
 
-            let res = await axios.post("http://localhost:3000/addActivity", dataActivity, {
+            let res = await axios.post(`${API_URL}/addActivity`, dataActivity, {
                 headers: {
                     "Content-Type": 'application/json'
                 }, withCredentials: true

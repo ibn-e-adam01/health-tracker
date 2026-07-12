@@ -8,8 +8,7 @@ const Page = () => {
     const [Weight, setWeight] = useState("");
     const [Category, setCategory] = useState("");
     const [BMI, setBMI] = useState("");
-
-
+    const API_URL = import.meta.env.VITE_API_URL;
 
   return (
     <>
@@ -24,7 +23,7 @@ const Page = () => {
                     Category
                 } //Here we HAVE TO pass Height, Weight & Category in an object to backend as otherwise(if we sent them directly), it will be sent as Number, which is not part of JSON!!!
 
-                let res = await axios.post("http://localhost:3000", bmiData, {
+                let res = await axios.post(`${API_URL}`, bmiData, {
                     headers: {
                          'Content-Type': 'application/json'
                         }, withCredentials: true

@@ -6,6 +6,7 @@ const PageLogin = () => {
 
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const navigate = useNavigate();
 
@@ -21,7 +22,7 @@ const PageLogin = () => {
                 Password
             }
 
-            let res = await axios.post("http://localhost:3000/login", dataLogin, {
+            let res = await axios.post(`${API_URL}/login`, dataLogin, {
                 headers: {
                     "Content-Type": 'application/json'
                 }, withCredentials: true
