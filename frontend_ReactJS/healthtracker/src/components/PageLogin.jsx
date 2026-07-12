@@ -22,7 +22,7 @@ const PageLogin = () => {
                 Password
             }
 
-            let res = await axios.post(`${API_URL}/login`, dataLogin, {
+            let res = await axios.post(`${API_URL}login`, dataLogin, {
                 headers: {
                     "Content-Type": 'application/json'
                 }, withCredentials: true
