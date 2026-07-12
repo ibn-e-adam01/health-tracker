@@ -1,5 +1,5 @@
 require('dotenv').config();
-console.log(process.env.MONGO_URI)
+console.log(process.env.MONGO_URI);
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_URI);
 const express = require('express');
@@ -13,10 +13,16 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 
+
+const allowedOrigins = [
+   process.env.VITE_FRONTEND_URL,           // It's my absolute main Vercel URL
+  'http://localhost:5173'                  // It Keeps local testing functional
+];
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: process.env.VITE_FRONTEND_URL,
     credentials: true,
 }))
 app.use(express.urlencoded({extended: true}));
