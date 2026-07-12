@@ -19,11 +19,12 @@ const PageProfile = () => {
                 });
 
                 if (res?.data?.success) {
+                    let latestBMI = res.data.bmi?.[0];
                     setUser([res.data.user]);
                     console.log(res.data.bmi);
                     console.log(res.data.activitySorted);
                     console.log(res.data.bmi[0]);
-                    setBMI([res.data.bmi[0]] || []);
+                    setBMI(latestBMI? [latestBMI] : []);
                     setBMIs(res.data.bmi || []);
                     setActivity(res.data.activitySorted || []);
                     setError('');
@@ -121,7 +122,7 @@ const PageProfile = () => {
         </div>
 
 
-        <div className='md:grid flex flex-col items-center justify-center gap-4 md:grid-cols-3 md:gap-2 text-zinc-100 md:px-16 px-4 max-w-7xl mx-auto'>
+        <div className='md:grid flex flex-col justify-center gap-4 md:grid-cols-3 md:gap-2 text-zinc-100 md:px-16 px-4 max-w-7xl mx-auto'>
         <div className='flex justify-between px-7 md:px-3 flex-wrap items-center rounded-md w-full h-auto md:max-w-90 md:h-auto md:pt-7 pb-5 pt-5 md:pb-7 md:mr-1 gap-12 bg-zinc-800 md:gap-3'>
             
         <div className='md:pl-7'>
