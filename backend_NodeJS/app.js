@@ -1,3 +1,7 @@
+require('dotenv').config();
+console.log(process.env.MONGO_URI)
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_URI);
 const express = require('express');
 const app = express();
 const path = require('path'); 
@@ -30,7 +34,7 @@ app.get('/profile', async (req, res) => {
             });
         }
 
-        let verifiedToken = jwt.verify(token, "shhh!!!it'ssecrett");
+        let verifiedToken = jwt.verify(token, process.env.JWT_SECRET);
         let user = await userModel.findById(verifiedToken.id);
 
         if (!user) {
@@ -76,7 +80,7 @@ app.put('/profile', async (req, res) => {
         status: false
     });
 
-    let verifiedToken = jwt.verify(token, "shhh!!!it'ssecrett");
+    let verifiedToken = jwt.verify(token, process.env.JWT_SECRET);
     console.log(token);
     let user = await userModel.findById(verifiedToken.id);
     let activity = await activityModel.findByIdAndUpdate({_id: activityId}, {
@@ -104,7 +108,7 @@ app.post('/profile', async (req, res) => {
         status: false
     });
 
-    let verifiedToken = jwt.verify(token, "shhh!!!it'ssecrett");
+    let verifiedToken = jwt.verify(token, process.env.JWT_SECRET);
     console.log(token);
     let user = await userModel.findById(verifiedToken.id);
     let activity = await activityModel.findByIdAndDelete({_id: activityId});
@@ -138,7 +142,7 @@ app.post('/addActivity', async (req, res) => {
         message: "something went wrong",
         status: false
     })
-    let verifiedToken = jwt.verify(token, "shhh!!!it'ssecrett");
+    let verifiedToken = jwt.verify(token, process.env.JWT_SECRET);
     console.log(token);
     let user = await userModel.findById(verifiedToken.id);
     if(!user) return res.status(401).json({
@@ -162,7 +166,7 @@ app.post('/addActivity', async (req, res) => {
 app.post('/', async (req, res) => {
     let {Height, Weight, Category} = req.body;
     let token = req.cookies.token;
-    let verifiedToken = jwt.verify(token, "shhh!!!it'ssecrett");
+    let verifiedToken = jwt.verify(token, process.env.JWT_SECRET);
     console.log(token);
     let user = await userModel.findById(verifiedToken.id);
     // console.log(Height);
@@ -222,7 +226,7 @@ app.post('/signup', async (req, res) => {
         email: Email,
         password: hash
     });
-        let token = jwt.sign({email: Email, id: user._id}, "shhh!!!it'ssecrett");
+        let token = jwt.sign({email: Email, id: user._id}, process.env.JWT_SECRET);
         res.cookie("token", token, {
             httpOnly: true,
             sameSite: 'lax'
@@ -250,7 +254,7 @@ app.post('/login', async (req, res) => {
         }
 
         
-    let newLoginToken = jwt.sign({email: Email, id: user._id}, "shhh!!!it'ssecrett");
+    let newLoginToken = jwt.sign({email: Email, id: user._id}, process.env.JWT_SECRET);
     res.cookie("token", newLoginToken, {
         httpOnly: true,
         sameSite: 'lax'
