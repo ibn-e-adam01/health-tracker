@@ -15,7 +15,7 @@ const cookieParser = require('cookie-parser');
 
 
 const allowedOrigins = [
-   process.env.VITE_FRONTEND_URL,           // It's my absolute main Vercel URL
+   "https://health-tracker-4o8g9g9r2-ibn-e-adam.vercel.app",           // It's my absolute main Vercel URL
   'http://localhost:5173'                  // It Keeps local testing functional
 ];
 

@@ -1,5 +1,6 @@
 #Environment variables
 backend_NodeJS/.env
+backend NodeJS/some.env
 
 #Node_Modules
 backend_NodeJS/node_modules/
