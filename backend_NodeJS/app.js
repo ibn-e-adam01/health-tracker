@@ -131,7 +131,13 @@ app.post('/logout', (req, res) => {
     console.log("Logout route hit")
     let token = req.cookies.token
     console.log(token)
-    res.clearCookie("token").json({
+    res.clearCookie("token", {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: process.env.NODE_ENV === "production"? 'none' : 'lax',
+            maxAge: 24 * 60 * 60 * 1000,
+            path: '/' 
+        }).json({
         success:true,
         message:"logged out successfully"
     });
