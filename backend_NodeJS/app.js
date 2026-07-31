@@ -28,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/profile', async (req, res) => {
     try {
         let token = req.cookies.token;
+        console.log(token)
         if (!token) {
             return res.status(401).json({
                 message: "Please log in first",
@@ -258,8 +259,7 @@ app.post('/login', async (req, res) => {
     res.cookie("token", newLoginToken).json({
         message: "successfully logged In!",
         success: true,
-        user,
-        newLoginToken
+        user
     });
 });
    
