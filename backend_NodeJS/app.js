@@ -258,7 +258,8 @@ app.post('/login', async (req, res) => {
     res.cookie("token", newLoginToken).json({
         message: "successfully logged In!",
         success: true,
-        user
+        user,
+        newLoginToken
     });
 });
    
