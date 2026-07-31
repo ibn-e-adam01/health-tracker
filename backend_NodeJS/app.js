@@ -16,6 +16,7 @@ const cookieParser = require('cookie-parser');
 
 app.use(express.json());
 app.use(cookieParser());
+app.set("trust proxy", 1)
 app.use(cors({
     origin: process.env.VITE_FRONTEND_URL,
     credentials: true
@@ -230,7 +231,13 @@ app.post('/signup', async (req, res) => {
     });
     console.log(user)
         let token = jwt.sign({email: Email, id: user._id}, process.env.JWT_SECRET);
-        res.cookie("token", token).json({
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: process.env.NODE_ENV === "production"? 'none' : 'lax',
+            maxAge: 24 * 60 * 60 * 1000,
+            path: '/' 
+        }).json({
             message:"successfully signed In!",
             success: true,
             user
@@ -256,7 +263,13 @@ app.post('/login', async (req, res) => {
         
     let newLoginToken = jwt.sign({email: Email, id: user._id}, process.env.JWT_SECRET);
     console.log(newLoginToken)
-    res.cookie("token", newLoginToken).json({
+    res.cookie("token", newLoginToken, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: process.env.NODE_ENV === "production"? 'none' : 'lax',
+            maxAge: 24 * 60 * 60 * 1000,
+            path: '/' 
+        }).json({
         message: "successfully logged In!",
         success: true,
         user
