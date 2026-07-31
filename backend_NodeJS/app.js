@@ -254,6 +254,7 @@ app.post('/login', async (req, res) => {
 
         
     let newLoginToken = jwt.sign({email: Email, id: user._id}, process.env.JWT_SECRET);
+    console.log(newLoginToken)
     res.cookie("token", newLoginToken).json({
         message: "successfully logged In!",
         success: true,
