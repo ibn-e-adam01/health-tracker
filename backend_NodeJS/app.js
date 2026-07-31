@@ -25,7 +25,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.get('profile', async (req, res) => {
+app.get('/profile', async (req, res) => {
     try {
         let token = req.cookies?.token;
         if (!token) {
@@ -70,7 +70,7 @@ app.get('profile', async (req, res) => {
     }
 });
 
-app.put('profile', async (req, res) => {
+app.put('/profile', async (req, res) => {
     let token = req.cookies.token;
     let {activityId, activityStatus} = req.body;
     console.log(req.body)
@@ -99,7 +99,7 @@ app.put('profile', async (req, res) => {
     
 });
 
-app.post('profile', async (req, res) => {
+app.post('/profile', async (req, res) => {
     let token = req.cookies.token;
     let {activityId} = req.body
     console.log(req.body)
