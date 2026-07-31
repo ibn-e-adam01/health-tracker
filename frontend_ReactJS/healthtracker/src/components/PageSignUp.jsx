@@ -26,7 +26,7 @@ const PageSignUp = () => {
 
             let response = await axios.post(`${API_URL}/signup`, dataSignUp, {
                 headers: {
-                    "Content-Type": 'application/json'
+                    "Content-Type": 'application/json',
                 }, withCredentials: true
             }
         );
