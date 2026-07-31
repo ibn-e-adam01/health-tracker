@@ -29,6 +29,7 @@ const Page = () => {
                         }, withCredentials: true
                 });
                 if(res.data){
+                    console.log(res.data)
                     setBMI(res.data.bmi.bmi)
                     setCategory(res.data.bmi.category)
                 }
