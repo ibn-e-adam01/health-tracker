@@ -131,7 +131,7 @@ app.post('/logout', (req, res) => {
     console.log(token)
     res.clearCookie("token").json({
         success:true,
-        message:"logged ut successfully"
+        message:"logged out successfully"
     });
 })
 
@@ -229,10 +229,7 @@ app.post('/signup', async (req, res) => {
     });
     console.log(user)
         let token = jwt.sign({email: Email, id: user._id}, process.env.JWT_SECRET);
-        res.cookie("token", token, {
-            httpOnly: true,
-            sameSite: 'lax'
-        }).json({
+        res.cookie("token", token).json({
             message:"successfully signed In!",
             success: true,
             user
@@ -257,10 +254,7 @@ app.post('/login', async (req, res) => {
 
         
     let newLoginToken = jwt.sign({email: Email, id: user._id}, process.env.JWT_SECRET);
-    res.cookie("token", newLoginToken, {
-        httpOnly: true,
-        sameSite: 'lax'
-    }).json({
+    res.cookie("token", newLoginToken).json({
         message: "successfully logged In!",
         success: true,
         user
