@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/profile', async (req, res) => {
     try {
-        let token = req.cookies?.token;
+        let token = req.cookies.token;
         if (!token) {
             return res.status(401).json({
                 message: "Please log in first",
@@ -227,6 +227,7 @@ app.post('/signup', async (req, res) => {
         email: Email,
         password: hash
     });
+    console.log(user)
         let token = jwt.sign({email: Email, id: user._id}, process.env.JWT_SECRET);
         res.cookie("token", token, {
             httpOnly: true,
