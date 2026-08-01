@@ -97,7 +97,7 @@ const PageProfile = () => {
   return (
     <>
     {error && (
-        <div className='w-full flex flex-col justify-center items-center bg-zinc-800 text-center py-3 text-red-400 font-medium'>
+        <div className='w-full flex flex-col justify-center items-center bg-zinc-900 text-center py-3 text-red-400 font-medium'>
             {error}
             <Link className='text-xl flex items-center justify-center mt-5 mb-8 h-10 md:h-13 w-28 md:w-29 font-semibold rounded-md hover:bg-[#981037] active:bg-[#981037] cursor-pointer hover:scale-95 active:scale-95 text-zinc-100 bg-[#CB2957]' to="/login">LOGIN</Link>
         </div>
@@ -111,7 +111,7 @@ const PageProfile = () => {
     <div className='flex justify-end px-12 h-10'><button className='text-xl flex items-center justify-center mt-5 mb-8 h-10 md:h-11 w-28 md:w-29 font-semibold rounded-md hover:bg-[#981037] active:bg-[#981037] cursor-pointer hover:scale-95 active:scale-95 text-zinc-100 bg-[#CB2957]'>LOGOUT</button></div>
     </form>
     ))}
-    <div className='h-auto w-full bg-zinc-900 justify-between md:px-12 px-7 gap-1 items-center flex flex-wrap py-4  md:py-5 text-zinc-100'>
+    <div className='h-auto w-full bg-zinc-950 justify-between md:px-12 px-7 gap-1 items-center flex flex-wrap py-4  md:py-5 text-zinc-100'>
             
             <div className='flex items-center justify-center gap-1 px-2 md:px-3'>
         <div className='h-24 w-24 md:w-30 md:h-30  rounded-full bg-zinc-300 overflow-hidden md:mx-3'>
@@ -135,7 +135,7 @@ const PageProfile = () => {
 
 
         <div className='md:grid flex flex-col justify-center gap-4 md:grid-cols-3 md:gap-2 text-zinc-100 md:px-16 px-4 max-w-7xl mx-auto'>
-        <div className='flex justify-between px-7 md:px-3 flex-wrap items-center rounded-md w-full h-auto md:max-w-90 md:h-auto md:pt-7 pb-5 pt-5 md:pb-7 md:mr-1 gap-12 bg-zinc-800 md:gap-3'>
+        <div className='flex justify-between px-7 md:px-3 flex-wrap items-center rounded-md w-full h-auto md:max-w-90 md:h-auto md:pt-7 pb-5 pt-5 md:pb-7 md:mr-1 gap-12 bg-zinc-900 md:gap-3'>
             
         <div className='md:pl-7'>
             <h1 className='text-md font-bold mb-4'>Primary Metric</h1>
@@ -167,7 +167,7 @@ const PageProfile = () => {
         </div>
        
         </div>
-        <div className='flex justify-start items-center rounded-md w-full h-auto md:max-w-90 md:h-auto md:pt-7 pb-5 pt-5 md:pb-7 bg-zinc-800 md:gap-3'>
+        <div className='flex justify-start items-center rounded-md w-full h-auto md:max-w-90 md:h-auto md:pt-7 pb-5 pt-5 md:pb-7 bg-zinc-900 md:gap-3'>
         <div className='md:pl-7 pl-7 w-full pr-7'>
             <h1 className='text-md font-bold mb-4'>Weekly Trend</h1>
             <ResponsiveContainer width="100%" aspect={2}>
@@ -189,7 +189,7 @@ const PageProfile = () => {
        
         </div>
 
-        <div className='flex justify-evenly items-center rounded-md w-full h-auto md:max-w-90 md:h-auto md:pt-7 pb-5 pt-5 md:pb-7 bg-zinc-800 md:gap-3 gap-4 md:pl-4'>
+        <div className='flex justify-evenly items-center rounded-md w-full h-auto md:max-w-90 md:h-auto md:pt-7 pb-5 pt-5 md:pb-7 bg-zinc-900 md:gap-3 gap-4 md:pl-4'>
             <div className='flex flex-col'>
             <h1 className='text-md font-bold mb-4'>Steps(Today)</h1>
             <h1 className='text-md text-zinc-300 font-semibold'>Automatic Steps Tracking</h1>

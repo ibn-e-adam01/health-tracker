@@ -54,7 +54,7 @@ const Page = () => {
             <input onChange={(e) => {
                 setHeight(e.target.value)
                 // console.log(e.target.value)
-            }} type="Number" step="any" className='bg-zinc-800 w-60 md:w-80 h-auto px-5 md:px-3 py-2 text-zinc-100 border-2 border-zinc-700 rounded-md text-center text-lg md:text-xl outline-none hover:bg-zinc-950 active:bg-zinc-950 hover:border-zinc-800 active:border-zinc-800' placeholder='Enter Your Height (e.g, 5.7...)' value={Height}/>
+            }} type="Number" step="any" className='bg-zinc-900 w-60 md:w-80 h-auto px-5 md:px-3 py-2 text-zinc-100 border-2 border-zinc-700 rounded-md text-center text-lg md:text-xl outline-none hover:bg-zinc-950 active:bg-zinc-950 hover:border-zinc-800 active:border-zinc-800' placeholder='Enter Your Height (e.g, 5.7...)' value={Height}/>
             </div>
             </div>
             <div className='flex items-center justify-center'>
@@ -63,7 +63,7 @@ const Page = () => {
             <input onChange={(e) => {
                 setWeight(e.target.value)
                 // console.log(e.target.value)
-            }} type="Number" step="any" className='bg-zinc-800 w-60 md:w-80 h-auto px-5 md:px-3  py-2 text-zinc-100 border-2 border-zinc-700 rounded-md text-center text-lg md:text-xl outline-none hover:bg-zinc-950 active:bg-zinc-950 hover:border-zinc-800 active:border-zinc-800' placeholder='Enter Your Weight (e.g, 60...)'value={Weight}/>
+            }} type="Number" step="any" className='bg-zinc-900 w-60 md:w-80 h-auto px-5 md:px-3  py-2 text-zinc-100 border-2 border-zinc-700 rounded-md text-center text-lg md:text-xl outline-none hover:bg-zinc-950 active:bg-zinc-950 hover:border-zinc-800 active:border-zinc-800' placeholder='Enter Your Weight (e.g, 60...)'value={Weight}/>
             </div>
             </div>
             {BMI?.length > 0 && BMI?.map((bmiUser) => (

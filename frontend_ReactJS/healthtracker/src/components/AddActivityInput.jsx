@@ -40,7 +40,7 @@ const AddActivityInput = () => {
             <input onChange={(e) => {
                 setActivity(e.target.value)
                 console.log(e.target.value)
-            }} type="text"  key={Activity._id} className='bg-zinc-800 w-auto md:w-80 h-auto px-3 py-2 text-zinc-100 border-2 border-zinc-700 rounded-md text-center text-xl outline-none hover:bg-zinc-950 active:bg-zinc-950 hover:border-zinc-800 active:border-zinc-800' placeholder='Enter Activity Name(e.g,sleep..)'value={Activity}/>
+            }} type="text"  key={Activity._id} className='bg-zinc-900 w-auto md:w-80 h-auto px-3 py-2 text-zinc-100 border-2 border-zinc-700 rounded-md text-center text-xl outline-none hover:bg-zinc-950 active:bg-zinc-950 hover:border-zinc-800 active:border-zinc-800' placeholder='Enter Activity Name(e.g,sleep..)'value={Activity}/>
             </div>
             </div>
             <button className='text-xl mt-4 h-11 w-33 font-semibold rounded-md hover:bg-[#981037] active:bg-[#981037] cursor-pointer hover:scale-95 active:scale-95 text-zinc-100 bg-[#CB2957]'>ADD</button>

@@ -42,7 +42,7 @@ const PageLogin = () => {
             <input onChange={(e) => {
                 setEmail(e.target.value)
                 // console.log(e.target.value)
-            }} type="email" className='bg-zinc-800 w-auto md:w-80 h-auto px-3 py-2 text-zinc-100 border-2 border-zinc-700 rounded-md text-center text-xl outline-none hover:bg-zinc-950 active:bg-zinc-950 hover:border-zinc-800 active:border-zinc-800' placeholder='Email'value={Email}/>
+            }} type="email" className='bg-zinc-900 w-auto md:w-80 h-auto px-3 py-2 text-zinc-100 border-2 border-zinc-700 rounded-md text-center text-xl outline-none hover:bg-zinc-950 active:bg-zinc-950 hover:border-zinc-800 active:border-zinc-800' placeholder='Email'value={Email}/>
             </div>
             </div>
             <div className='flex items-center justify-center'>
@@ -51,7 +51,7 @@ const PageLogin = () => {
             <input onChange={(e) => {
                 setPassword(e.target.value)
                 // console.log(e.target.value)
-            }} type="password" className='bg-zinc-800 w-auto md:w-80 h-auto px-3 py-2 text-zinc-100 border-2 border-zinc-700 rounded-md text-center text-xl outline-none hover:bg-zinc-950 active:bg-zinc-950 hover:border-zinc-800 active:border-zinc-800' placeholder='Password'value={Password}/>
+            }} type="password" className='bg-zinc-900 w-auto md:w-80 h-auto px-3 py-2 text-zinc-100 border-2 border-zinc-700 rounded-md text-center text-xl outline-none hover:bg-zinc-950 active:bg-zinc-950 hover:border-zinc-800 active:border-zinc-800' placeholder='Password'value={Password}/>
             </div>
             </div>
 
