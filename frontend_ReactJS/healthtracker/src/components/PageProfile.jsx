@@ -3,8 +3,19 @@ import React, { useEffect, useState } from 'react';
 import { act } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend, BarChart, Bar, PieChart, Pie } from 'recharts';
+import Lenis from 'lenis'
 
 const PageProfile = () => {
+    const lenis = new Lenis();
+
+// Use requestAnimationFrame to continuously update the scroll
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    raf();
+    
     const [User, setUser] = useState([]);
     const [BMI, setBMI] = useState([]);
     const [error, setError] = useState('');
