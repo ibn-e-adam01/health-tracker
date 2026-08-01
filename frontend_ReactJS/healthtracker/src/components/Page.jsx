@@ -27,8 +27,7 @@ const Page = () => {
 
                 const bmiData = {
                     Height,
-                    Weight,
-                    Category
+                    Weight
                 } //Here we HAVE TO pass Height, Weight & Category in an object to backend as otherwise(if we sent them directly), it will be sent as Number, which is not part of JSON!!!
 
                 let res = await axios.post(`${API_URL}`, bmiData, {
