@@ -102,14 +102,14 @@ const PageProfile = () => {
     ))}
     <div className='h-auto w-full bg-zinc-900 justify-between md:px-12 px-7 gap-3 items-center flex flex-wrap py-4  md:py-5 text-zinc-100'>
             
-            <div className='flex items-center justify-center md:px-3'>
+            <div className='flex items-center justify-center px-2 md:px-3'>
         <div className='h-24 w-24 md:w-30 md:h-30  rounded-full bg-zinc-300 overflow-hidden md:mx-3'>
             <img className='object-cover' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkzb0dW2wEKVLrObwnKjy5NiR-XYIV5AkMGZwotFHVGkYOvFeP_cGA-Ubg&s=10" alt="" />
         </div>
         {User?.map((user) => (
         <div key={user._id} className='flex flex-col justify-start items-center md:mr-9 bg-[#212121]  py-1 px-3 rounded-md w-auto md:w-auto'>
             <div className='w-full flex md:items-start'>
-        <h1 className='mx-5 text-lg font-extrabold md:font-bold md:text-2xl'>{user?.username}</h1>
+        <h1 className='mr-5 text-lg font-extrabold md:font-bold md:text-2xl'>{user?.username}</h1>
         </div>
         <div className='flex gap-1 text-zinc-400 md:pr-0 pr-1'>
         <h1 className=' text-sm font-extrabold  md:font-bold md:text-lg'>Logged On</h1>
