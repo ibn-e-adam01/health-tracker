@@ -111,7 +111,7 @@ const PageProfile = () => {
     <div className='flex justify-end px-12 h-10'><button className='text-xl flex items-center justify-center mt-5 mb-8 h-10 md:h-11 w-28 md:w-29 font-semibold rounded-md hover:bg-[#981037] active:bg-[#981037] cursor-pointer hover:scale-95 active:scale-95 text-zinc-100 bg-[#CB2957]'>LOGOUT</button></div>
     </form>
     ))}
-    <div className='h-auto w-full bg-zinc-900 justify-between md:px-12 px-7 gap-3 items-center flex flex-wrap py-4  md:py-5 text-zinc-100'>
+    <div className='h-auto w-full bg-zinc-900 justify-between md:px-12 px-7 gap-1 items-center flex flex-wrap py-4  md:py-5 text-zinc-100'>
             
             <div className='flex items-center justify-center gap-1 px-2 md:px-3'>
         <div className='h-24 w-24 md:w-30 md:h-30  rounded-full bg-zinc-300 overflow-hidden md:mx-3'>
@@ -209,7 +209,7 @@ const PageProfile = () => {
             {Activity?.length?(
                 Activity?.map((activity) => (
             <div className='flex items-center justify-center gap-3'>
-            <div key={activity._id} className={`w-full gap-4 rounded-md h-auto pt-4 pb-4 bg-[#CB2957] flex items-center justify-between px-3 ${activity.activityStatus? "opacity-40 line-through" : ""}`}>
+            <div key={activity._id} className={`w-full gap-4 rounded-md h-12 pt-4 pb-4 bg-[#CB2957] flex items-center justify-between px-3 ${activity.activityStatus? "opacity-40 line-through" : ""}`}>
                 <h1 className='font-bold ml-2 text-2xl text-zinc-100'>{activity?.activity}</h1>
                 <input type="checkbox" className="h-6 w-6 hover:scale-95 hover:text-zinc-100 active:scale-95 active:text-zinc-100 hover:cursor-pointer" checked={activity.activityStatus} onChange={() => updateActivityStatus(activity)}/>
             </div>
