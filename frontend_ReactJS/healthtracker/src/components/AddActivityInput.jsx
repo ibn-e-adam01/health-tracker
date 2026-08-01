@@ -11,8 +11,8 @@ const AddActivityInput = () => {
 
   return (
     <>
-    <div className='h-auto w-full bg-zinc-900 flex justify-center items-center flex-col'>
-        <h1 className='text-4xl font-extrabold text-zinc-100 md:mr-3 mt-11'>TRACK ACTIVITY</h1>
+    <div className='h-screen w-full bg-zinc-900 flex justify-center items-center flex-col'>
+        <h1 className='md:text-4xl text-3xl font-extrabold text-zinc-100 md:mr-3 mt-11'>TRACK ACTIVITY</h1>
         <form onSubmit={async (e) => {
             e.preventDefault();
 
