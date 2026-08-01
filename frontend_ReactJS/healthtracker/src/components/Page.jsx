@@ -43,7 +43,7 @@ const Page = () => {
                 }
             } catch (err) {
                 console.error(err);
-                setError('Please log in first to view your profile');
+                setError('Please log in first to calculate your BMI');
             }
 
             }} action="">
