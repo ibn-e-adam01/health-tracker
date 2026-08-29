@@ -1,8 +1,3 @@
-
----
-
-#Health Tracker
-
 ```markdown
 # Health Tracker
 
@@ -42,6 +37,7 @@ The application uses React.js for the frontend and Node.js with Express.js for b
 ### Development & Deployment
 - Git & GitHub
 - Vercel
+- Render
 
 ## Architecture
 
@@ -64,6 +60,7 @@ The frontend communicates with the backend through REST APIs. The backend handle
 ##Key Learning Outcomes
 
 This project provided practical experience with:
+
 1.Building a full-stack React application
 
 2.Developing backend services with Node.js and Express.js
