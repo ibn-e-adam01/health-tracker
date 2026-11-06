@@ -47,7 +47,7 @@ const Page = () => {
             }
 
             }} action="">
-        <div className='w-full h-190 flex flex-col gap-4 justify-start pt-5 items-center bg-zinc-900'>
+        <div className='w-full h-full flex flex-col gap-4 justify-center pt-5 items-center bg-zinc-900'>
             <div className='flex items-center justify-center'>
             <div className='text-zinc-100'>
             <p className='text-zinc-300 pl-2 pb-1'>Height(Ft)</p>
