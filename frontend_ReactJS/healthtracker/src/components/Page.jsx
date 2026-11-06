@@ -18,7 +18,7 @@ const Page = () => {
                 <Link className='text-xl flex items-center justify-center mt-5 mb-8 h-10 md:h-13 w-28 md:w-29 font-semibold rounded-md hover:bg-[#981037] active:bg-[#981037] cursor-pointer hover:scale-95 active:scale-95 text-zinc-100 bg-[#CB2957]' to="/login">LOGIN</Link>
             </div>
         )}
-    <div className='h-auto w-full bg-zinc-900 flex justify-center items-center flex-col'>
+    <div className='h-screen w-full bg-zinc-900 flex justify-center items-center flex-col'>
         <h1 className='md:text-4xl text-3xl font-extrabold text-zinc-100 mt-11'>TRACK YOUR BMI</h1>
         <form onSubmit={async (e) => {
                 e.preventDefault();
