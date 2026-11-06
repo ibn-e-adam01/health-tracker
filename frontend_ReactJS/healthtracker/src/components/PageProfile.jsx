@@ -142,12 +142,15 @@ const PageProfile = () => {
             <div className='flex items-end gap-2'>
                 {BMI?.length ? (
                     BMI.map((bmi) => (
+                        <>
                         <h1 key={bmi._id} className='text-4xl md:text-5xl font-bold mb-1'>{bmi?.bmi}</h1>
+                        <h1 className='text-2xl md:text-2xl font-bold mb-1 text-zinc-300'>BMI</h1>
+                        </>
                     ))
                 ) : (
                     <h1 className='text-sm md:text-base font-semibold text-zinc-400'>No BMI data yet</h1>
                 )}
-            <h1 className='text-2xl md:text-2xl font-bold mb-1 text-zinc-300'>BMI</h1>
+            
             </div>
             
             <div className='flex flex-wrap gap-1'>
